@@ -3,3 +3,7 @@ export const countSyllables = (haikuLine) => {
   const extractedSyllables = haikuLine.match(regex) ?? [];
   return extractedSyllables.length
 }
+
+export const convertLines = (haikuArr = []) => {
+  return haikuArr.map((line) => countSyllables(line))
+}
