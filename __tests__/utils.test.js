@@ -1,6 +1,6 @@
-import { syllableCounter } from "../src/js/utils";
+import { countSyllables } from "../src/js/utils";
 
-describe('syllableCounter', () => {
+describe('countSyllables', () => {
   let haiku;
 
   beforeEach(() => {
@@ -12,18 +12,18 @@ describe('syllableCounter', () => {
   });
 
   test('returns zero on empty string', () => {
-    expect(syllableCounter("")).toEqual(0);
+    expect(countSyllables("")).toEqual(0);
   });
 
   test('returns one on single one syllable word', () => {
-    expect(syllableCounter("side")).toEqual(1);
+    expect(countSyllables("side")).toEqual(1);
   });
 
   test('returns correct count of mutlisyllable words', () => {
-    expect(syllableCounter("proselytizing")).toEqual(4);
+    expect(countSyllables("proselytizing")).toEqual(4);
   });
 
   test('returns correct count for multiple words', () => {
-    expect(syllableCounter("they mutter take your claws and climb")).toEqual(8);
+    expect(countSyllables("they mutter take your claws and climb")).toEqual(8);
   });
 });
