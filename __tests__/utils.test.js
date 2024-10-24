@@ -1,40 +1,36 @@
-import { countSyllables, convertLines } from "../src/js/utils";
+import { countSyllables, mapArray } from "../src/js/utils";
 
 describe('countSyllables', () => {
 
-  test('returns zero on empty string', () => {
+  test('zero on empty string', () => {
     expect(countSyllables("")).toEqual(0);
   });
 
-  test('returns one on single one syllable word', () => {
+  test('one on single one syllable word', () => {
     expect(countSyllables("side")).toEqual(1);
   });
 
-  test('returns correct count of multisyllable words', () => {
+  test('correct count of multisyllable words', () => {
     expect(countSyllables("proselytizing")).toEqual(4);
   });
 
-  test('returns correct count for multiple words', () => {
+  test('correct count for multiple words', () => {
     expect(countSyllables("they mutter take your claws and climb")).toEqual(8);
   });
 });
 
-describe('countSyllables', () => {
-  let haiku;
+describe('mapArray', () => {
+  let multiplyEach;
 
   beforeEach(() => {
-    haiku = [
-      "Leafs, then snow, then rain",
-      "Stuff's always falling on me",
-      "Except in summer"
-    ];
+    multiplyEach = mapArray((el) => el * 2);
   });
 
-  test('executes countSyllables on each element', () => {
-    expect(convertLines(["", "", ""])).toEqual([0, 0, 0]);
+  test('returns function', () => {
+    expect(typeof multiplyEach).toEqual("function");
   });
 
-  test('returns array of counted syllables', () => {
-    expect(convertLines(haiku)).toEqual([5, 7, 5]);
+  test('each element has map callback called on it', () => {
+    expect(multiplyEach([1, 2, 3])).toEqual([2, 4, 6]);
   });
 });

@@ -4,6 +4,6 @@ export const countSyllables = (haikuLine) => {
   return extractedSyllables.length
 }
 
-export const convertLines = (haikuArr = []) => {
-  return haikuArr.map((line) => countSyllables(line))
+export const mapArray = (mapCallback) => {
+  return (array) => array.map(mapCallback)
 }
