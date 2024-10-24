@@ -10,7 +10,7 @@ describe('countSyllables', () => {
     expect(countSyllables("side")).toEqual(1);
   });
 
-  test('correct count of multisyllable words', () => {
+  test('correct count of polysyllabic words', () => {
     expect(countSyllables("proselytizing")).toEqual(4);
   });
 
