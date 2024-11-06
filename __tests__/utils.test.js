@@ -1,4 +1,4 @@
-import { countSyllables, mapArray } from "../src/js/utils";
+import { mapArray, checkHaiku, countSyllables } from "../src/js/utils";
 
 describe('countSyllables', () => {
 
@@ -32,5 +32,12 @@ describe('mapArray', () => {
 
   test('each element has map callback called on it', () => {
     expect(multiplyEach([1, 2, 3])).toEqual([2, 4, 6]);
+  });
+});
+
+describe('checkHaiku', () => {
+
+  test('checks haiku length', () => {
+    expect(checkHaiku(["wrong", "bad"])).toEqual("haiku must have exactly 3 lines, not 2");
   });
 });
