@@ -19,7 +19,8 @@ This site allows users to check whether their haiku follow the proper rules. It 
 ## Setup/Installation Requirements
 
 * Clone repository
-* Using your favorite command line console, run `npm run build` (requires npm) in the top level directory
+* In a command line console, navigate to the top level of the directory and run the command `npm i` (requires npm)
+* Then after everything has installed, run `npm run build`
 * Navigate to the newly-generated scr directory and open index.html
 * Alternately, you can run `npm run start` and navigate to http://localhost:8080/ to serve the project live
 
