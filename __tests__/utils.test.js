@@ -1,4 +1,4 @@
-import { mapArray, checkHaiku, countSyllables } from "../src/js/utils";
+import { mapArray, checkHaiku, countSyllables } from "../src/js/utils.js";
 
 describe('countSyllables', () => {
 
