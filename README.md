@@ -1,8 +1,8 @@
-# Power Plant
+# Haiku Checker
 
 #### By **Samantha Callie**
 
-#### Click buttons
+#### Check your haiku
 
 ## Technologies Used
 
@@ -14,7 +14,7 @@
 
 ## Description
 
-This site allows users to "take care" of a "plant" by clicking buttons that make numbers go up. All javascript code is written with functional programming concepts in mind.
+This site allows users to check whether their haiku follow the proper rules. It very often gets the answer wildly wrong because I couldn't get a syllable library working.
 
 ## Setup/Installation Requirements
 
